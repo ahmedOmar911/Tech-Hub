@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Store System</title>
+    <link rel="shortcut icon" href="images/Store System/store-solid.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/store-system.css">
+</head>
+
+<body class="bg-dark text-white">
+    <h1 class="text-center my-5">Store System</h1>
+    <div class="text-dark w-75 m-auto mb-5">
+        <div class="form-floating mb-4">
+            <input type="text" class="form-control" id="productName" placeholder="Product Name" oninput="productValidation(this)">
+            <div class="alert alert-danger d-none" role="alert">
+                Product name must start with a capital letter && minimum length is 5
+            </div>
+            <label for="productName">Product Name</label>
+        </div>
+        <div class="form-floating mb-4">
+            <input type="number" class="form-control" id="productPrice" placeholder="Product Price" oninput="productValidation(this)">
+            <div class="alert alert-danger d-none" role="alert">
+                Product Price minimum amount is 10$
+            </div>
+            <label for="productPrice">Product Price</label>
+        </div>
+        <div class="form-floating mb-4">
+            <input type="text" class="form-control" id="productCategory" placeholder="Product Category"
+                list="all-categories" oninput="productValidation(this)">
+            <div class="alert alert-danger d-none" role="alert">
+                Product Category must be from the available Categories
+            </div>
+            <label for="productCategory">Product Category</label>
+            <datalist id="all-categories">
+                <option value="TVs" />
+                <option value="Monitors" />
+                <option value="Desktops" />
+                <option value="Laptops" />
+                <option value="Smart Phones" />
+                <option value="Smart Tablets" />
+                <option value="Graphic Tablets" />
+                <option value="Wearable Devices" />
+                <option value="Consoles" />
+                <option value="Desktop Accessories" />
+            </datalist>
+        </div>
+        <div class="form-floating mb-4">
+            <input type="file" class="form-control" id="product-image" placeholder="Product Image">
+            <label for="product-image">Product Image</label>
+        </div>
+        <div class="form-floating mb-4">
+            <textarea class="form-control" placeholder="Enter Product Description" id="productDescription"
+                style="height: 150px;" oninput="productValidation(this)"></textarea>
+            <div class="alert alert-danger d-none" role="alert">
+                Product Description must be more than 10 characters
+            </div>
+            <label for="productDescription">Enter Product Description</label>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-outline-primary" id="add-btn" onclick="addProduct()">Add Product</button>
+            <button class="btn btn-outline-warning d-none" id="update-btn" onclick="updateProduct()">Update
+                Product</button>
+            <button class="btn btn-outline-secondary" onclick="clearForm()">Clear Form</button>
+        </div>
+    </div>
+
+
+
+    <h2 class="text-center my-5">All Products</h2>
+    <div class="my-5 w-50 m-auto">
+        <input type="text" class="form-control" id="search-for-product" placeholder="Enter Product Name"
+            oninput="searchForProduct(this)">
+    </div>
+    <div class="container mb-5">
+        <div class="row" id="products-zone"></div>
+    </div>
+
+
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/store-system.js"></script>
+</body>
+
+</html>

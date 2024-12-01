@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e4e4e4;
+}
+
+form {
+    width: 80%;
+    height: 75vh;
+    margin: auto;
+    margin-top: 5%;
+    padding: 75px 10px 25px 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 15%);
+}
+
+h2 {
+    margin-bottom: 33px;
+    font-size: 44px;
+}
+
+input {
+    width: 60%;
+    height: 40px;
+    margin: 10px 0 10px 0;
+    padding-left: 10px;
+    border-radius: 7px;
+    border: solid 1px gray;
+}
+
+button {
+    margin-top: 44px;
+    font-size: 22px;
+    color: white;
+    background-color: dodgerblue;
+    border: solid dodgerblue;
+    padding: 5px 200px;
+    border-radius: 7px;
+    margin-bottom: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: dodgerblue;
+    font-size: 18px;
+}
